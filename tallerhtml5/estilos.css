@@ -1,0 +1,294 @@
+/* =========================================
+   ESTILOS GENERALES Y RESET
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    color: #4d4d4d;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: "Roboto Slab", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+/* Botones */
+.boton {
+    color: #f1f1d1;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: #ca7c0f;
+    font-size: .9em;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #4d4d4d;
+    padding: 20px;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #ecece6;
+    font-weight: 700;
+    font-size: 28px;
+    font-family: "Pacifico", serif;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+nav ul li {
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+    text-decoration: none;
+    color: #f1f1f1;
+    font-size: 18px;
+}
+
+
+header {
+    background-image: url('img/fundo.jpg'); /* Pon una imagen de fondo en tu carpeta img */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: #f1f1f1;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin-bottom: 2em;
+    max-width: 800px;
+}
+
+
+#sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #af3f41;
+    color: #f1f1f1;
+}
+
+#sobre p {
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+}
+
+#sobre .boton {
+    background-color: #f1f1f1;
+    color: #4d4d4d;
+}
+
+
+#servicios {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#servicios p {
+    margin-bottom: 30px;
+}
+
+#servicios div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#servicios img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+#servicios h3 {
+    margin-bottom: 10px;
+}
+
+
+#portafolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#portafolio p {
+    margin-bottom: 20px;
+}
+
+#portafolio img {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+#contacto p {
+    margin-bottom: 20px;
+}
+
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contacto-info img {
+    width: 50px;
+}
+
+.contacto-info a {
+    color: #4d4d4d;
+}
+
+
+footer {
+    background-color: #db1717;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 50px;
+    }
+
+    nav > a {
+        margin-bottom: 0;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: auto;
+    }
+
+    nav ul li {
+        width: auto;
+    }
+
+    nav ul li a {
+        padding: 10px 20px;
+    }
+
+    header {
+        height: 600px;
+    }
+
+    #sobre {
+        height: 250px;
+        justify-content: center;
+    }
+
+    /* Servicios en fila */
+    #servicios {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    #servicios h2, #servicios > p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #servicios div {
+        flex-grow: 1;
+        flex-basis: 150px;
+        padding: 0 10px;
+    }
+
+    /* Portafolio en cuadrícula de 3 columnas */
+    #portafolio {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    #portafolio h2, #portafolio > p {
+        width: 100%;
+        text-align: center;
+    }
+
+    #portafolio img {
+        width: 33.33%;
+    }
+
+    /* Contacto en fila */
+    .contacto-info {
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* COMPUTADORAS GRANDES (pantallas de 1024px en adelante) */
+@media (min-width: 1024px) {
+    header {
+        height: 60vh;
+    }
+    
+    #sobre {
+        height: 30vh;
+        min-height: 250px;
+    }
+}
